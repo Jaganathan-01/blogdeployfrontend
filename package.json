@@ -37,5 +37,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://jaganblogs.herokuapp.com"
+  "proxy": "https://jaganblogs.herokuapp.com/api/"
 }
+ 

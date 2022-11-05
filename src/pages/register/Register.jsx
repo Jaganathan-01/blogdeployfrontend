@@ -2,6 +2,7 @@
 import "./register.css";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -52,7 +53,7 @@ export default function Register() {
         <button className="registerButton" type="submit">Register</button>
       </form>
         <button className="registerLoginButton">
-        <a className="link" href="/login">Login</a>
+        <Link className="link" to="/login">Login</Link>
         </button>
         <br/>
        {error && <span style={{color:"red"}}>Something went wrong!</span>}

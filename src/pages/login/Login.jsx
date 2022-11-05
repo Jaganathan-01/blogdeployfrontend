@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useContext, useRef } from "react";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./login.css";
@@ -20,7 +21,7 @@ export default function Login() {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
-    }
+    } 
   };
   console.log(isFetching);
 
@@ -44,7 +45,7 @@ export default function Login() {
         <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
       </form>
         <button className="loginRegisterButton" type="submit">
-          <a className="link" href="/register">Register</a>
+          <Link className="link" to="/register">Register</Link>
         </button>
     </div>
   );
