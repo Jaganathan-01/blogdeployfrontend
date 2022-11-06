@@ -16,7 +16,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axiosInstance.post("/auth/register", {
+      const res = await axiosInstance.post("https://blogapp-backend1.herokuapp.com/auth/register", {
         username,
         email,
         password,
